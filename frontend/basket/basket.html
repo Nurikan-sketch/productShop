@@ -30,7 +30,7 @@
         <div class="description">
             <span>Common Projects</span>
             <span>Bball High</span>
-            <span>White</span>
+            <span>Prise 549$</span>
         </div>
 
         <div class="quantity">
@@ -43,7 +43,7 @@
             </button>
         </div>
 
-        <div class="total-price">$549</div>
+        <div class="price">Prise 549$</div>
     </div>
 
     <!-- Товар #2 -->
@@ -60,7 +60,7 @@
         <div class="description">
             <span>Maison Margiela</span>
             <span>Future Sneakers</span>
-            <span>White</span>
+            <span>Prise 870$</span>
         </div>
 
         <div class="quantity">
@@ -73,7 +73,7 @@
             </button>
         </div>
 
-        <div class="total-price">$870</div>
+        <div class="price">Prise 870$</div>
     </div>
 
     <!-- Товар #3 -->
@@ -90,57 +90,24 @@
         <div class="description">
             <span>Our Legacy</span>
             <span>Brushed Scarf</span>
-            <span>Brown</span>
+            <span>Prise 349$</span>
         </div>
 
         <div class="quantity">
             <button class="plus-btn" type="button" name="button">
                 <img src="/frontend/basket/basketImages/plus.svg" alt="" />
             </button>
-            <input type="text" name="name" value="1">
+            <label>
+                <input type="text" name="name" value="1">
+            </label>
             <button class="minus-btn" type="button" name="button">
                 <img src="/frontend/basket/basketImages/minus.svg" alt="" />
             </button>
         </div>
 
-        <div class="total-price">$349</div>
+        <div class="price"></div>
     </div>
 
-    <script type="text/javascript">
-        $('.minus-btn').on('click', function(e) {
-            e.preventDefault();
-            const $this = $(this);
-            const $input = $this.closest('div').find('input');
-            let value = parseInt($input.val());
-
-            if (value > 1) {
-                value = value - 1;
-            } else {
-                value = 0;
-            }
-
-            $input.val(value);
-
-        });
-
-        $('.plus-btn').on('click', function(e) {
-            e.preventDefault();
-            const $this = $(this);
-            const $input = $this.closest('div').find('input');
-            let value = parseInt($input.val());
-
-            if (value < 100) {
-                value = value + 1;
-            } else {
-                value =100;
-            }
-
-            $input.val(value);
-        });
-
-        $('.like-btn').on('click', function() {
-            $(this).toggleClass('is-active');
-        });
-    </script>
+    <script src="basketScripts.js"></script>
 </div>
 </body>
